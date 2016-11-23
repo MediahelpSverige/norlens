@@ -101,13 +101,13 @@ section{
     padding: 90px 0px;
 }
 
-nav.main-nav {
-    /* background-color: #0020B1; */
-    /* overflow: auto; */
-    width: 75%;
-    /* float: right; */
-    display: inline-block;
-    text-align: center;
+nav.main-nav {
+    /* background-color: #0020B1; */
+    /* overflow: auto; */
+    width: 75%;
+    /* float: right; */
+    display: inline-block;
+    text-align: center;
 }
 
 
@@ -817,10 +817,11 @@ nav {
     /* overflow: auto; */
     /* width: 100%; */
 }
-nav ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    /* float: right; */
 }
 nav ul li {
     display:inline-block;
@@ -829,13 +830,13 @@ nav ul li {
 
 
 /* sub navigation */
-nav li ul {
-    background-color:rgb(225,75,75);
-    position:absolute;
-    left:0;
-    top: 90px; /* make this equal to the line-height of the links (specified below) */
-    width: 190px;
-    z-index: 999999;
+nav li ul {
+    background-color:rgb(225,75,75);
+    position:absolute;
+    left:0;
+    top: 70px; /* make this equal to the line-height of the links (specified below) */
+    width: 190px;
+    z-index: 999999;
 }
 nav li li {
     position:relative;
