@@ -70,7 +70,7 @@
 
 <script type="text/javascript">
 
-	
+
 
 
 
@@ -84,7 +84,7 @@
 
 
 
-<body <?php body_class( $class ); ?>>
+<body>
 
 
 
@@ -96,9 +96,9 @@
 
 			<div class="center-field"><div class="searchbar"><?php get_search_form(); ?></div></div>
 
-				<div class="hours">Mån - Fre 7:00 - 16:30<i class="fa fa-clock-o"></i></div>
+				<div class="hours"><i class="fa fa-clock-o"></i> Mån - Fre 7:00 - 16:30</div>
 
-                 <div class="tele">Tel: 018-100400<i class="fa fa-mobile"></i></div>
+                 <div class="tele"><i class="fa fa-mobile"></i> 018-100400</div>
 
 			</div>
 
@@ -130,7 +130,7 @@
 
 
 
-<?php if (is_front_page() == false) { 
+<?php if (is_front_page() == false) {
 
 	/*Lägg bildspel i banner på sidor som inte är förstasidan. kopplat till custom fields på varje sida*/ ?>
 
@@ -138,19 +138,19 @@
 
 		<div class="showcase">
 
-		<?php 
+		<?php
 
 
 
-		while (have_posts()) : the_post(); 
+		while (have_posts()) : the_post();
 
-	
+
 
 
 
 		?>
 
-		<?php 				
+		<?php
 
 foreach( get_cfc_meta( 'bildspel' ) as $key => $value ){
 
@@ -168,7 +168,7 @@ foreach( get_cfc_meta( 'bildspel' ) as $key => $value ){
 
 <?php } ?>
 
-		
+
 
 
 

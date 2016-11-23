@@ -1,12 +1,14 @@
-=== WCK - Custom Fields and Custom Post Types Creator === 
+=== Custom Post Types and Custom Fields creator - WCK ===
 
 Contributors: cozmoslabs, reflectionmedia, madalin.ungureanu, sareiodata, adispiac
 Donate link: http://www.cozmoslabs.com/wordpress-creation-kit/
-Tags: custom fields, custom field, wordpress custom fields, advanced custom fields, custom post type, custom post types, post types, cpt, post type, repeater fields, repeater, repeatable fields, meta box, metabox, taxonomy, taxonomies, custom taxonomy, custom taxonomies, custom, custom fields creator, post meta, meta, get_post_meta, post creator, cck, content types, types
+Tags: custom fields, custom field, wordpress custom fields, custom post type, custom post types, post types, repeater fields, meta box, metabox, custom taxonomy, custom fields creator, post meta
 
 Requires at least: 3.1
-Tested up to: 4.5
-Stable tag: 1.2.5
+Tested up to: 4.6.1
+Stable tag: 2.0.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A must have tool for creating custom fields, custom post types and taxonomies, fast and without any programming knowledge.
 
@@ -26,7 +28,7 @@ A must have tool for creating custom fields, custom post types and taxonomies, f
 [youtube http://www.youtube.com/watch?v=_ueYKlP_i7w]
 
 = Custom Fields =
-* Custom fields types: wysiwyg editor, upload, text, textarea, select, checkbox, radio
+* Custom fields types: WYSIWYG editor, upload, text, textarea, select, checkbox, radio, number, HTML, time-picker, phone, currency select, color picker, heading
 * Easy to create custom fields for any post type.
 * Support for **Repeater Fields** and **Repeater Groups** of custom fields.
 * Drag and Drop to sort the Repeater Fields.
@@ -44,7 +46,7 @@ A must have tool for creating custom fields, custom post types and taxonomies, f
 * Attach the taxonomy to built in or custom post types
 
 = WCK PRO =
-  The [WCK PRO version](http://www.cozmoslabs.com/wck-custom-fields-custom-post-types-plugin/) offers:
+  The [WCK PRO version](http://www.cozmoslabs.com/wck-custom-fields-custom-post-types-plugin/?utm_source=wp.org&utm_medium=pb-description-page&utm_campaign=WCKFree) offers:
   
 * **Swift Templates** - Build your front-end templates directly from the WordPress admin UI, without writing any PHP code. Easily display registered custom post types, custom fields and taxonomies in your current theme.
 * Front-end Posting - form builder for content creation and editing
@@ -52,19 +54,13 @@ A must have tool for creating custom fields, custom post types and taxonomies, f
 * More field types: Date-picker, Country Select, User Select, CPT Select
 * Premium Email Support for your project
   
- [See complete list of PRO features](http://www.cozmoslabs.com/wck-custom-fields-custom-post-types-plugin/)
+ [See complete list of PRO features](http://www.cozmoslabs.com/wck-custom-fields-custom-post-types-plugin/?utm_source=wp.org&utm_medium=pb-description-page&utm_campaign=WCKFree)
 
 = Website =
 http://www.cozmoslabs.com/wck-custom-fields-custom-post-types-plugin/
 
 = Announcement Post and Video =
 http://www.cozmoslabs.com/3747-wordpress-creation-kit-a-sparkling-new-custom-field-taxonomy-and-post-type-creator/
-
-= Documentation =
-http://www.cozmoslabs.com/docs/wordpress-creation-kit-documentation/
-
-= Bug Submission and Forum Support =
-http://www.cozmoslabs.com/forums/forum/wordpresscreationkit/
 
 == Installation ==
 
@@ -143,6 +139,57 @@ Creating a taxonomy generally automatically creates a special query variable usi
 10. Taxonomy listing
 
 == Changelog ==
+= 2.0.3 =
+* Fixed some issues with the unserialized fields conversion
+* Changed per batch variable from 100 to 30 to try to reduce timeouts on sites with a lot of entries
+
+= 2.0.2 = 
+* Fixed an issue with the unserialized conversion page when fields had same names
+
+= 2.0.1 =
+* Fixed issue with Custom Fields Creator when fields had the same name as the meta name
+
+= 2.0.0 =
+* We now save every custom field in it's own separate post meta with an editable meta_key
+* UI improvements to repeater sortable table
+
+= 1.3.3 =
+* Added date format option for Datepicker Field
+* Fixed notices when multiple single boxes were present and the first one had a required error
+* New menu icon
+
+= 1.3.2 =
+* Added Number field type
+* Removed notice regarding post thumbnail on certain themes
+* New branding to match website
+
+= 1.3.1 =
+* Fixed preview draft not showing the correct custom fields in certain conditions
+* Fixed a fatal error that was happening in certain conditions when adding a new Custom Fields Creator Meta Box
+
+= 1.3.0 =
+* Security Fixes
+
+= 1.2.9 =
+* Added Lables field in Custom Fields Creator next to Options for checkboxes, selects and radios
+
+= 1.2.8 =
+* Added Phone field type
+* Added HTML field type
+* Added Time Picker field type
+* Added Default Text for textarea field instead of Default Value
+
+= 1.2.7 =
+* Added Heading field type
+* Added Colorpicker field type
+* Added Currency field type
+* Added number of rows and readonly options to the textarea field
+* Added error notice for users with a php version lower than 5.3.0 on the settings page
+
+= 1.2.6 =
+* Small change in saving single metaboxes
+* Fixed a possible conflict with ACF Pro
+
 = 1.2.5 =
 * Minor compatibility tweeks for WordPress 4.5
 * Added new filter for registration errors:'wck_registration_errors'

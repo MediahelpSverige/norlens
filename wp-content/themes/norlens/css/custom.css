@@ -1,5 +1,6 @@
-body{
-    background-color: #FFFFFF  !important;
+body{
+    background-color: #FFFFFF  !important;
+    overflow-x: hidden;
 }
 ol,ul{
     margin: 0px;
@@ -95,9 +96,9 @@ pre {
 }
 
 
-section{
-    position: relative;
-    padding: 90px 0px;
+section{
+    position: relative;
+    padding: 90px 0px;
 }
 
 nav.main-nav {
@@ -185,11 +186,12 @@ nav ul{
     padding-right: 35px;
 }
 
-.hours {
-    float: right;
-    /* margin-top: 10px; */
-    font-size: 15px;
-    margin-right: 30px;
+.hours {
+    float: right;
+    /* margin-top: 10px; */
+    font-size: 15px;
+    margin-right: 30px;
+    line-height: 40px;
 }
 
 form#searchform {
@@ -221,16 +223,16 @@ form#searchform {
 }
 
 
-.searchbar input {
-    width: 80%;
-    border: 1px solid #202E53;
-    float: left;
-    /* margin: 20px 0px; */
-    padding-left: 10px;
-    font-size: 15px;
-    height: 40px;
-    /* margin-top: 10px; */
-    /* padding: 20px 10px; */
+.searchbar input {
+    width: 80%;
+    border: 1px solid #202E53;
+    float: left;
+    /* margin: 20px 0px; */
+    padding-left: 10px;
+    font-size: 15px;
+    height: 40px;
+    /* margin-top: 10px; */
+    /* padding: 20px 10px; */
 }
 
 button#searchsubmit {
@@ -707,17 +709,17 @@ span.wpcf7-list-item-label {
     height: 300px;
 }
 
-.single h1:first-child {
-    font-size: 40px;
-    background-color: white;
-    color: #202E53;
-    margin-top: 0px;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    padding: 0px 5px;
-    margin-bottom: 50px;
-    display: block;
+.single h1:first-child {
+    font-size: 40px;
+    background-color: white;
+    color: #202E53;
+    margin-top: 0px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 0px 5px;
+    margin-bottom: 50px;
+    display: block;
 }
 
 .aktuellt-cont i {
@@ -747,11 +749,11 @@ section.single-page.banner {
     background-image: url('http://norlens.mediahelpcrm.se/wp-content/uploads/2016/04/SPW2.jpg');
     background-size: cover;
     background-position: center;
-    border-bottom: 3px solid #0694C4;
+    /* border-bottom: 3px solid #0694C4; */
 }
 
 li.current-menu-item:hover {
-    
+
 }
 li.current-menu-item {
     background-color: #0694C4;
@@ -783,9 +785,11 @@ input.wpcf7-form-control.wpcf7-submit{
     font-family: montserrat;
 }
 
-input.wpcf7-form-control.wpcf7-text{
-    margin: 10px 0px;
-    padding: 5px;
+input.wpcf7-form-control.wpcf7-text{
+    margin: 10px 0px;
+    padding: 15px;
+    background: #e2e2e2;
+    border: 1px solid #dadada;
 }
 
 
@@ -977,5 +981,4 @@ ul.sub-menu {}
 
 .galleri-sidebar li a{
     color: white;
-}
-
+}/* LAPTOP STYLES max-height 625px */@media (max-height:625px){  .top-head{    padding: 10px 0px;    font-size: 12px;  }  .hours{    font-size: 12px;  }  .tele{    font-size: 12px;  }  .bottom-head{    max-height: 70px;  }  .logo img{    max-height: 65px;  }.main-nav ul li{  padding: 15px 2px;}.banner{  height: 300px;}.showcase .item{  height: 300px;}}

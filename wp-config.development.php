@@ -2,18 +2,18 @@
 /**
  * Development environment config settings
  *
- * Enter any WordPress config settings that are specific to this environment 
+ * Enter any WordPress config settings that are specific to this environment
  * in this file.
- * 
+ *
  * @package    Studio 24 WordPress Multi-Environment Config
  * @version    1.0
  * @author     Studio 24 Ltd  <info@studio24.net>
  */
-  
+
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'traktor');
+define('DB_NAME', 'norlens');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -32,8 +32,8 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 
-define('WP_HOME', 'http://localhost:8080/tmsab');
-define('WP_SITEURL', 'http://localhost:8080/tmsab');
+define('WP_HOME', 'http://localhost:8080/norlens');
+define('WP_SITEURL', 'http://localhost:8080/norlens');
 
 
 $table_prefix  = 'wp_';

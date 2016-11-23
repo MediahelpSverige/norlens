@@ -25,6 +25,30 @@ window['wordfenceExt'] = {
 			function(){ jQuery('#wordfenceAutoUpdateChoice').fadeOut(); }
 			);
 	},
+	adminEmailChoice: function(choice) {
+		this.ajax('wordfence_adminEmailChoice', {
+				choice: choice
+			},
+			function(res){ jQuery('#wordfenceAdminEmailWarning').fadeOut(); },
+			function(){ jQuery('#wordfenceAdminEmailWarning').fadeOut(); }
+		);
+	},
+	suPHPWAFUpdateChoice: function(choice) {
+		this.ajax('wordfence_suPHPWAFUpdateChoice', {
+				choice: choice
+			},
+			function(res){ jQuery('#wordfenceSuPHPUpdateWarning').fadeOut(); },
+			function(){ jQuery('#wordfenceSuPHPUpdateWarning').fadeOut(); }
+		);
+	},
+	falconDeprecationChoice: function(choice) {
+		this.ajax('wordfence_falconDeprecationChoice', {
+				choice: choice
+			},
+			function(res){ jQuery('#wordfenceFalconDeprecationWarning').fadeOut(); },
+			function(){ jQuery('#wordfenceFalconDeprecationWarning').fadeOut(); }
+		);
+	},
 	removeFromCache: function(postID){
 		this.ajax('wordfence_removeFromCache', {
 			id: postID

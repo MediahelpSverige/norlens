@@ -4,7 +4,7 @@
 
     <div class="searchbar">
 
-        <input type="text" value="<?php echo get_search_query(); ?>" placeholder="Sök bland all våra tjänster" name="s" id="s" />
+        <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
 
             <button type="submit" id="searchsubmit" class="">
 
@@ -12,7 +12,7 @@
 
             </button>
 
-            
+
 
     </div>
 

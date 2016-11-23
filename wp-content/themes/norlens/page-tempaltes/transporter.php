@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-/*Template name: Transporter*/ 
+/*Template name: Transporter*/
 
 get_header();
 
@@ -9,7 +9,7 @@ get_header();
 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
-					the_post(); 
+					the_post();
 
 					$thepost = $post->ID;
 
@@ -29,12 +29,12 @@ $about_children = get_page_children( 10, $all_wp_pages );
 <div class="container">
 <ul class="sub-menu">
 	<?php foreach ($about_children as $post) : ?>
-		
+
 	<?php setup_postdata($post); ?>
 
 		<?php if ($thepost == $post->ID) { ?>
 			<li class="current-page"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
-		<?php }else{ ?> 
+		<?php }else{ ?>
 
 		<li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
 
@@ -48,23 +48,23 @@ $about_children = get_page_children( 10, $all_wp_pages );
 </div>
 
 <section class="trucks-content">
-	<div class="container">
-	<div class="row">
-				<?php 
+	<div class="container">
+	<div class="row">		<div class="col-md-12">
+				<?php
 			if ( have_posts() ) {
 				while ( have_posts() ) {
-					the_post(); 
+					the_post();
 					//
 					// Post Content here
 					the_content();
 					//
 				} // end while
 			} // end if
-?>
+?></div>
 	</div>
 
 	<?php if ($post->ID == 39 || $post->ID == 10) { ?>
-		
+
 
 <div class="trucks-table">
 
@@ -85,8 +85,8 @@ $about_children = get_page_children( 10, $all_wp_pages );
 
 					  while ( $query8->have_posts() ) : $query8->the_post(); ?>
 
-					  
-		<div class="row">
+
+
 			<div class="truck-item">
 				<div class="col-md-4"><?php the_post_thumbnail('full'); ?></div>
 				<div class="col-md-2"><p><?php the_field('modell');?></p></div>
@@ -94,7 +94,7 @@ $about_children = get_page_children( 10, $all_wp_pages );
 				<div class="col-md-2"><p><?php the_field('bilplatser');?></p></div>
 				<div class="col-md-2"><p><?php the_field('trafikerar');?></p></div>
 			</div>
-		</div>
+
 
 
 
