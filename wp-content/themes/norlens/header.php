@@ -90,7 +90,7 @@
 
 	<header>
 
-		<div class="top-head">
+		<!-- <div class="top-head">
 
 			<div class="container">
 
@@ -102,7 +102,7 @@
 
 			</div>
 
-		</div>
+		</div> -->
 
 		<div class="bottom-head">
 
@@ -110,7 +110,7 @@
 
 			<div class="logo">
 
-				<img src="<?php bloginfo('template_url');?>/img/logga1.png">
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url');?>/img/logo.svg"></a>
 
 			</div>
 
