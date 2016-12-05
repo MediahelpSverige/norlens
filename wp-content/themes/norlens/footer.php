@@ -5,11 +5,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-5 col-xs-12">
-				<?php the_field('footer-contact'); ?>
+				<?php the_field('footer-contact', 4); ?>
 			</div>
 
 			<div class="col-sm-offset-2 col-sm-5 col-xs-12">
-				<?php the_field('contact-oppet'); ?>
+				<?php the_field('contact-oppet', 4); ?>
 			</div>			
 		</div>
 	</div>
