@@ -6,7 +6,7 @@ Tags: custom fields, custom field, wordpress custom fields, custom post type, cu
 
 Requires at least: 3.1
 Tested up to: 4.6.1
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,10 @@ Creating a taxonomy generally automatically creates a special query variable usi
 10. Taxonomy listing
 
 == Changelog ==
+= 2.0.4 =
+* Added sortable taxonomy admin column support for Taxonomy Creator
+* Added show_in_quick_edit argument support for Taxonomy Creator
+
 = 2.0.3 =
 * Fixed some issues with the unserialized fields conversion
 * Changed per batch variable from 100 to 30 to try to reduce timeouts on sites with a lot of entries
