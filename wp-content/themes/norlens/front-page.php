@@ -106,6 +106,10 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 				} // end while
 
+        wp_reset_postdata();
+
+
+
 			} // end if
 
 ?>
@@ -114,21 +118,97 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 <div class="row">
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/biltransporter/bilar/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/transport.jpg');"><h2>Biltransport</h2></div></a></div>
+  <?php
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/biltransporter/skadeanmalan/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/reperation.jpg');"><h2>Skadeanmälan</h2></div></a></div>
+    $tjanst1 = get_field('tjanstebox1');
+
+
+    if($tjanst1){
+
+      // override $post
+	     $post = $tjanst1;
+
+       setup_postdata( $post );
+
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
 
 
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/kontakt"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/kontakt.jpg');"><h2>Kontakta Oss</h2></div></a></div>
+  <?php
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/om-oss/miljo-och-sakerhet/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/miljo.jpg');"><h2>Miljö och säkerhet</h2></div></a></div>
+
+    $tjanst2 = get_field('tjanstebox2');
+
+    if($tjanst2){
+
+      // override $post
+       $post = $tjanst2;
+
+       setup_postdata( $post );
+
+
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
+
+  <?php
+
+    $tjanst3 = get_field('tjanstebox3');
+
+    if($tjanst3){
+
+      // override $post
+       $post = $tjanst3;
+
+       setup_postdata( $post );
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
+  <?php
+
+    $tjanst4 = get_field('tjanstebox4');
+
+    if($tjanst4){
+
+      // override $post
+       $post = $tjanst4;
+
+       setup_postdata( $post );
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
 
 </div>
 
 </div>
-
 </div>
+
+
 
 <div class="col-md-5">
 
