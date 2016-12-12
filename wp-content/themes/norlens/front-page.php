@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 
@@ -40,13 +40,13 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 		<div class="showcase">
 
-		<?php 
+		<?php
 
 
 
-		while ($query->have_posts()) : $query->the_post(); 
+		while ($query->have_posts()) : $query->the_post();
 
-	
+
 
 
 
@@ -70,7 +70,7 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 	    <?php wp_reset_postdata(); ?>
 
-		</div>	
+		</div>
 
 	</section>
 
@@ -82,19 +82,19 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 <div class="container">
 
-	
+
 
 	<div class="row">
 
 		<div class="col-md-7">
 
-		<?php 
+		<?php
 
 			if ( have_posts() ) {
 
 				while ( have_posts() ) {
 
-					the_post(); 
+					the_post();
 
 					//
 
@@ -106,6 +106,10 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 				} // end while
 
+        wp_reset_postdata();
+
+
+
 			} // end if
 
 ?>
@@ -114,42 +118,117 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 <div class="row">
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/biltransporter/bilar/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/transport.jpg');"><h2>Biltransport</h2></div></a></div>
+  <?php
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/biltransporter/skadeanmalan/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/reperation.jpg');"><h2>Skadeanmälan</h2></div></a></div>
+    $tjanst1 = get_field('tjanstebox1');
 
-	
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/kontakt"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/kontakt.jpg');"><h2>Kontakta Oss</h2></div></a></div>
+    if($tjanst1){
 
-	<div class="col-md-6"><a href="<?php bloginfo('url')?>/om-oss/miljo-och-sakerhet/"><div class="item" style="background-image: url('<?php bloginfo('template_url')?>/img/miljo.jpg');"><h2>Miljö och säkerhet</h2></div></a></div>
+      // override $post
+	     $post = $tjanst1;
+
+       setup_postdata( $post );
+
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
+
+
+  <?php
+
+
+    $tjanst2 = get_field('tjanstebox2');
+
+    if($tjanst2){
+
+      // override $post
+       $post = $tjanst2;
+
+       setup_postdata( $post );
+
+
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
+
+  <?php
+
+    $tjanst3 = get_field('tjanstebox3');
+
+    if($tjanst3){
+
+      // override $post
+       $post = $tjanst3;
+
+       setup_postdata( $post );
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
+  <?php
+
+    $tjanst4 = get_field('tjanstebox4');
+
+    if($tjanst4){
+
+      // override $post
+       $post = $tjanst4;
+
+       setup_postdata( $post );
+
+       ?>
+
+    <div class="col-md-6"><a href="<?php the_permalink(); ?>"><div class="item" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"><h2><?php the_title(); ?></h2></div></a></div>
+
+    <?php wp_reset_postdata(); ?>
+
+  <?php  } ?>
+
 
 </div>
 
 </div>
-
 </div>
+
+
 
 <div class="col-md-5">
-
 
 	<div class="fb-wrap">
 
 		<div class="contact-sidebar">
 			<h4>Kontaktuppgifter</h4>
-			
+
 			<ul>
 				<li>
-					<i class="fa fa-mobile-phone"></i> <?php the_field('contact-tel'); ?>			
+					<i class="fa fa-mobile-phone"></i> <a href="tel:<?php the_field('contact-tel'); ?>"><?php the_field('contact-tel'); ?></a>
 				</li>
 				<li>
-					<i class="fa fa-envelope-o"></i> <a href="mailto:<?php the_field('contact-email'); ?>"><?php the_field('contact-email'); ?></a>				
+					<i class="fa fa-envelope-o"></i> <a href="mailto:<?php the_field('contact-email'); ?>"><?php the_field('contact-email'); ?></a>
 				</li>
-			</ul>			
+			</ul>
 		</div>
 
 		<div class="contact-sidebar">
-			<?php the_field('contact-oppet'); ?>			
+			<?php the_field('contact-oppet'); ?>
 		</div>
 
 
@@ -157,7 +236,7 @@ $query = new WP_Query(array( 'post_type' => 'bildspel', 'post_per_page' => -1) )
 
 	</div>
 
-	
+
 
 	</div>
 

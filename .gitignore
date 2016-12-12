@@ -1,5 +1,9 @@
 wp-content/plugins/wordfence/
 node_modules
+<<<<<<< HEAD
 wp-content/uploads/sucuri/*
+=======
+wp-content/uploads/sucuri/
+>>>>>>> 853e1f69093b05aebede81b1419496dbc2bb516d
 .htaccess
 wp-content/uploads/sucuri/sucuri-settings.php
