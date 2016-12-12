@@ -1,4 +1,5 @@
 wp-content/plugins/wordfence/
 node_modules
-wp-content/uploads/sucuri
+wp-content/uploads/sucuri/*
 .htaccess
+wp-content/uploads/sucuri/sucuri-settings.php
