@@ -1,105 +1,98 @@
-<?php
-
+<?php 
 /*
-
 Template name: offert
-
 */
 
 get_header();
 
 ?>
 
-
-
-
-
 <section class="section-white single">
 
-
+<div class="container-wrap">
 
 	<div class="container">
 
-	<div class="container-wrap">
-
 		<?php 
-
 			if ( have_posts() ) {
-
 				while ( have_posts() ) {
+					the_post(); ?>
 
-					the_post(); 
+					<h1>
+						<?php the_title(); ?>
+					</h1>	
 
-					//print_r($post);
+					<h4>
+						STEG 1: Välj privatperson eller företag
+					</h4>
 
-					//
+					<div class="choose-form">
+						<input type="radio" name="choose-form" class="radio-button radio-private"><label for="radio-private">Privat</label>
+						<input type="radio" name="choose-form" class="radio-button radio-company"><label for="radio-company">Företag</label>						
+					</div>
 
-					// Post Content here
+					<div class="select-private">
+						<h4>
+							STEG 2: Ange typ av förfrågan
+						</h4>
 
-					the_content();
+						<select name="select-private" class="select-private">
+							<option value="Förfrågan" selected>Ange typ av förfrågan:</option>
+							<option value="Beställning">Beställning</option>
+							<option value="Offertförfrågan">Offertförfrågan</option>
+						</select>
+					</div>
 
-					//
+					<div class="select-company">
+						<h4>
+							STEG 2: Ange typ av förfrågan
+						</h4>
 
-				} // end while
+						<select name="select-company" class="select-company">
+							<option value="Förfrågan" selected>Ange typ av förfrågan:</option>
+							<option value="Beställning">Beställning</option>
+							<option value="Offertförfrågan">Offertförfrågan</option>
+						</select>
+					</div>
 
-			} // end if
+					<div class="order-private">
+						<?php echo do_shortcode('[contact-form-7 id="251" title="Beställning privat"]'); ?>
+					</div>
 
-?>
+					<div class="offert-private">						
+						<?php echo do_shortcode('[contact-form-7 id="255" title="Offert privat"]'); ?>
+					</div>
 
+					<div class="order-company">
+						<?php echo do_shortcode('[contact-form-7 id="254" title="Beställning företag"]'); ?>				
+					</div>
 
+					<div class="offert-company">
+						<?php echo do_shortcode('[contact-form-7 id="256" title="Offert företag"]'); ?>				
+					</div>					
 
-<?php $query8 = new WP_Query(array( 'post_type' => 'page', 'post_parent' => 7, 'post_per_page' => -1) );
-
-//print_r($query8);
-
-					  while ( $query8->have_posts() ) : $query8->the_post(); ?>
-
-
-
-		<?php the_title('<h2>', '</h2>');  ?>
-
-
-
-		<?php the_content();?>
-
-
-		<input type="radio" class="radio-private"><label for="radio-private">Privat</label>
-		<input type="radio" class="radio-company"><label for="radio-company">Företag</label>
-
-		<div class="select-private">
-			Privat - beställning, offert
+					<?php
+				} // endwhile
+			} // endif ?>
 		</div>
-
-		<div class="select-company">
-			Företag - beställning, offert
-		</div>
-
-		<div class="order-private">
-			Beställning privat
-		</div>
-
-		<div class="offert-private">
-			Offert privat
-		</div>
-
-		<div class="order-company">
-			Beställning företag
-		</div>
-
-		<div class="offert-company">
-			Offert företag
-		</div>
-
-	    <?php endwhile;?>
-
-
-
-</div>
-</div>
+	</div>
 </section>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"><?php the_field('villkor-rubrik'); ?></h4>
+			</div>
+			<div class="modal-body">
+				<?php the_field('villkor-text'); ?>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+			</div>
+		</div>
+	</div>
+</div>
 
-
-<?php 
-get_footer();
-?>
+<?php get_footer(); ?>

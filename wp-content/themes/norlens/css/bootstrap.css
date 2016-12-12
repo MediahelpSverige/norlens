@@ -2633,8 +2633,8 @@ input[type="search"] {
 .radio,
 .checkbox {
   position: relative;
-  display: block;
-  margin-top: 10px;
+  /* display: block; */
+  /* margin-top: 10px; */
   margin-bottom: 10px;
 }
 .radio label,

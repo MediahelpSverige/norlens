@@ -14,6 +14,8 @@
 
 <script src="<?php bloginfo( 'template_url' ); ?>/js/parallax.min.js"></script>
 
+<script src="<?php bloginfo( 'template_url' ); ?>/js/script.js"></script>
+
 <!--Custom stylesheet-->
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap.css">
